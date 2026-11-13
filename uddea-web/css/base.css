@@ -1,0 +1,91 @@
+/* ==========================================================
+   base.css — Reglas globales
+   Paleta: verde campo #0B3D2E, verde #1E7A4F, lima #B6F23A, ámbar #F2A93B.
+   ========================================================== */
+
+/* 1. VARIABLES (Pregunta clásica de examen) */
+:root {
+  /* Paleta de colores UDDEA */
+  --color-primario: #0B3D2E;
+  /* Verde campo oscuro (Cabecera, pie, títulos) */
+  --color-secundario: #1E7A4F;
+  /* Verde medio (Botones, enlaces) */
+  --color-acento: #B6F23A;
+  /* Lima (Hover, destaques) */
+  --color-alerta: #F2A93B;
+  /* Ámbar (Etiquetas, insignias) */
+
+  /* Colores estructurales */
+  --color-fondo: #F9FAFB;
+  /* Gris muy clarito para el fondo de la web */
+  --color-superficie: #FFFFFF;
+  /* Blanco puro para las tarjetas */
+  --color-texto: #1F2937;
+  /* Gris oscuro para el texto (cansa menos que el negro puro) */
+  --color-texto-claro: #6B7280;
+  /* Gris medio para subtítulos */
+
+  /* Tipografía */
+  --fuente-principal: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 2. RESET BÁSICO */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 3. ESTILOS GLOBALES DEL BODY */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  /* Mejora la legibilidad de los párrafos */
+}
+
+/* 4. ENLACES Y TEXTOS */
+a {
+  color: var(--color-secundario);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-primario);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-primario);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+/* Ayudas de accesibilidad (del código original) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+}
