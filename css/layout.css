@@ -1,0 +1,318 @@
+/* ==========================================================
+   layout.css — Estructura de la página
+   ========================================================== */
+
+/* 1. CONTENEDOR PRINCIPAL (Límites de la web) */
+.perfiles,
+.empleo,
+.foro,
+.mas,
+main section[aria-labelledby="titulo-pagina"] {
+   max-width: 1300px;
+   /* Ampliado a 1300px para igualar la anchura del Hero */
+   margin: 0 auto;
+   padding: 20px;
+}
+
+/* 2. CABECERA (Flexbox) */
+.site-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 1px solid #E5E7EB;
+
+   /* NUEVO: Ocupa todo el ancho con margen lateral elástico del 4% */
+   width: 100%;
+   padding: 20px 4%;
+}
+
+.main-nav ul {
+   display: flex;
+   gap: 24px;
+   /* Espacio entre los enlaces del menú */
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.header-actions {
+   display: flex;
+   gap: 15px;
+   align-items: center;
+}
+
+/* ==========================================================
+   3. PORTADA / HERO (Banner a 2 columnas)
+   ========================================================== */
+.hero {
+   display: grid;
+   grid-template-columns: 1.2fr 1fr;
+   /* Columna izquierda más ancha */
+   align-items: center;
+   gap: 60px;
+   text-align: left;
+   /* Todo alineado a la izquierda */
+   padding: 100px 4%;
+   width: 100%;
+   max-width: 100%;
+   margin-top: 0;
+   margin-bottom: 60px;
+   border-radius: 0;
+
+   /* Degradado muy sutil (0.2 y 0.4) para dejar brillar la foto */
+   background-image:
+      linear-gradient(rgba(18, 91, 101, 0.20),
+         rgba(12, 66, 73, 0.40)),
+      url("../assets/images/hero.jpeg");
+
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   color: #FFFFFF;
+}
+
+/* Contenedor de los textos y buscador de la izquierda */
+.hero__texto {
+   display: flex;
+   flex-direction: column;
+}
+
+.hero h1 {
+   color: #FFFFFF;
+   font-size: 2.8rem;
+   margin-bottom: 16px;
+   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero p,
+.hero h2,
+.hero h3,
+.hero h4 {
+   color: #FFFFFF;
+   text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+   font-size: 1.1rem;
+   max-width: 600px;
+   margin-bottom: 30px;
+   opacity: 0.9;
+}
+
+/* El buscador dentro del Hero */
+.hero .search {
+   width: 100%;
+   max-width: 600px;
+   display: flex;
+   gap: 10px;
+   margin-top: 0;
+}
+
+.hero .search input {
+   flex-grow: 1;
+   padding: 14px 20px;
+   border-radius: 50px;
+   border: none;
+   font-size: 1rem;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Botones dentro del Hero */
+.hero .btn {
+   border-radius: 50px;
+   padding: 14px 30px;
+   background-color: var(--color-superficie);
+   color: var(--color-primario);
+   font-weight: bold;
+}
+
+.hero .btn:hover {
+   background-color: var(--color-secundario);
+   color: #FFFFFF;
+}
+
+/* Los chips debajo del buscador */
+.hero .chips {
+   margin-top: 30px;
+   justify-content: flex-start;
+   /* Cambiado a la izquierda */
+   display: flex;
+   flex-wrap: wrap;
+   gap: 12px;
+   padding: 0;
+   list-style: none;
+}
+
+.hero .chip {
+   background-color: rgba(18, 91, 101, 0.65);
+   border: 1px solid rgba(255, 255, 255, 0.6);
+   color: #FFFFFF;
+   padding: 8px 18px;
+   border-radius: 50px;
+   font-size: 0.95rem;
+   text-shadow: none;
+   transition: all 0.2s ease-in-out;
+}
+
+.hero a.chip:hover,
+.hero .chip:hover {
+   background-color: var(--color-acento);
+   border-color: var(--color-acento);
+   color: #FFFFFF;
+}
+
+/* ==========================================================
+   TARJETA FLOTANTE DEL RETO (Columna Derecha)
+   ========================================================== */
+.reto {
+   /* Usamos el mismo verde oscuro semitransparente de los chips */
+   background-color: rgba(18, 91, 101, 0.65);
+   backdrop-filter: blur(8px);
+   padding: 40px 30px;
+   border-radius: 16px;
+   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+   /* Mismo borde blanco que define a los chips */
+   border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.reto__etiqueta {
+   font-size: 0.85rem;
+   font-weight: 700;
+   color: #B6F23A;
+   text-transform: uppercase;
+   letter-spacing: 1px;
+   margin-bottom: 10px;
+   text-shadow: none;
+}
+
+.reto h2 {
+   font-size: 1.8rem;
+   color: #FFFFFF;
+   margin-bottom: 15px;
+   text-shadow: none;
+}
+
+.reto p {
+   font-size: 1rem;
+   margin-bottom: 20px;
+   text-shadow: none;
+}
+
+/* Barra de progreso personalizada */
+.reto progress {
+   width: 100%;
+   height: 8px;
+   border-radius: 5px;
+   margin-bottom: 25px;
+   appearance: none;
+}
+
+.reto progress::-webkit-progress-bar {
+   background-color: rgba(255, 255, 255, 0.2);
+   border-radius: 5px;
+}
+
+.reto progress::-webkit-progress-value {
+   background-color: #B6F23A;
+   border-radius: 5px;
+}
+
+/* Botón especial del reto (Verde lima) */
+.btn--reto {
+   background-color: #B6F23A;
+   color: var(--color-primario);
+   font-weight: bold;
+   padding: 12px 24px;
+   border-radius: 50px;
+   display: inline-block;
+   transition: transform 0.2s;
+   text-decoration: none;
+}
+
+.btn--reto:hover {
+   transform: scale(1.05);
+   color: var(--color-primario);
+}
+
+/* ==========================================================
+   X. PÁGINAS INTERNAS (Empleo, Foro, Mentoría)
+   ========================================================== */
+/* Le damos un espacio limpio al título principal de cada página */
+main section[aria-labelledby="titulo-pagina"] {
+   padding: 40px 0;
+   text-align: center;
+   border-bottom: 1px solid #E5E7EB;
+   margin-bottom: 40px;
+}
+
+main section[aria-labelledby="titulo-pagina"] h1 {
+   font-size: 2.5rem;
+   margin-bottom: 10px;
+}
+
+main section[aria-labelledby="titulo-pagina"] p {
+   color: var(--color-texto-claro);
+   font-size: 1.1rem;
+}
+
+/* 4. REJILLAS DE TARJETAS AUTOMÁTICAS (¡Truco de examen!) */
+.perfiles__lista,
+.mas {
+   display: grid;
+   /* Magia pura: crea columnas automáticas que no bajan de 250px. ¡Responsive sin Media Queries! */
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 24px;
+   margin-top: 20px;
+   margin-bottom: 60px;
+}
+
+/* 5. SECCIÓN DOBLE: Empleo y Foro */
+.doble {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   /* Dos columnas exactamente iguales */
+   gap: 40px;
+   margin-bottom: 60px;
+}
+
+/* 6. PIE DE PÁGINA */
+.site-footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   margin-top: 40px;
+   border-top: 1px solid #E5E7EB;
+
+   /* NUEVO: Ocupa todo el ancho con margen lateral elástico */
+   width: 100%;
+   padding: 40px 4% 60px 4%;
+}
+
+.footer__nav {
+   display: flex;
+   gap: 15px;
+}
+
+/* ==========================================================
+   DISEÑO RESPONSIVE (Móviles y Tablets)
+   ========================================================== */
+@media (max-width: 800px) {
+
+   .hero {
+      grid-template-columns: 1fr;
+      text-align: center;
+      padding-top: 40px;
+   }
+
+   .hero__texto {
+      align-items: center;
+   }
+
+   .hero .chips {
+      justify-content: center;
+   }
+
+   .reto {
+      text-align: left;
+   }
+}

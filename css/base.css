@@ -1,0 +1,108 @@
+/* ==========================================================
+   base.css — Reglas globales
+   Paleta: verde campo #0B3D2E, verde #1E7A4F, lima #B6F23A, ámbar #F2A93B.
+   ========================================================== */
+
+/* 1. VARIABLES (Paleta oficial UDDEA) */
+:root {
+  /* Colores extraídos del logo oficial */
+  --color-primario: #125B65;
+  /* Verde/Azul oscuro (Texto UDDEA y curva izquierda) */
+  --color-secundario: #57897E;
+  /* Celeste apagado (Curva derecha) */
+
+  /* Tonos derivados para interacción */
+  --color-acento: #0C4249;
+  /* Un tono más oscuro del primario para el hover de los botones */
+  --color-alerta: #F2A93B;
+  /* Mantenemos el ámbar para las insignias y avisos */
+
+  /* Colores estructurales */
+  --color-fondo: #F9FAFB;
+  --color-superficie: #FFFFFF;
+  --color-texto: #1F2937;
+  --color-texto-claro: #6B7280;
+
+  /* Tipografía */
+  --fuente-principal: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* 2. RESET BÁSICO */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 3. ESTILOS GLOBALES DEL BODY */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  /* Mejora la legibilidad de los párrafos */
+}
+
+/* 4. ENLACES Y TEXTOS */
+a {
+  color: var(--color-secundario);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: var(--color-primario);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-primario);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+/* Ayudas de accesibilidad (del código original) */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+}
+
+/*5 Diseño del Logo Híbrido (Imagen + Texto) */
+.logo-hibrido {
+  display: flex;
+  align-items: center;
+  /* Alinea el símbolo y el texto en el centro vertical */
+  gap: 12px;
+  /* Espacio entre el dibujo y el texto */
+  text-decoration: none;
+}
+
+.logo-texto {
+  font-size: 1.8rem;
+  font-weight: 800;
+  /* Texto bien grueso */
+  color: var(--color-primario);
+  letter-spacing: -0.5px;
+  line-height: 1;
+}

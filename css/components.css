@@ -1,0 +1,344 @@
+/* ==========================================================
+   components.css — Piezas reutilizables
+   ========================================================== */
+
+/* 1. BOTONES (El estándar interactivo) */
+.btn {
+   display: inline-block;
+   padding: 10px 24px;
+   background-color: var(--color-secundario);
+   /* Verde medio */
+   color: #FFFFFF;
+   /* Texto siempre blanco para contraste */
+   border: none;
+   border-radius: 6px;
+   /* Esquinas ligeramente redondeadas, estilo moderno */
+   font-weight: 600;
+   cursor: pointer;
+   text-align: center;
+   transition: all 0.2s ease;
+   /* Transición suave para el hover */
+}
+
+/* Efecto al pasar el ratón */
+.btn:hover {
+   background-color: var(--color-primario);
+   /* Verde oscuro */
+   color: #FFFFFF;
+   transform: translateY(-2px);
+   /* Pequeño salto hacia arriba */
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   /* Sombra para dar profundidad */
+}
+
+/* 2. CHIPS (Las etiquetas de búsqueda rápida y foros) */
+.chips {
+   display: flex;
+   flex-wrap: wrap;
+   /* Si no caben, bajan de línea */
+   gap: 10px;
+   list-style: none;
+   padding: 0;
+   margin-top: 20px;
+}
+
+.chip {
+   display: inline-block;
+   padding: 6px 14px;
+   background-color: #E5E7EB;
+   /* Gris clarito */
+   color: var(--color-texto);
+   border-radius: 20px;
+   /* Bordes totalmente redondos como píldoras */
+   font-size: 0.9rem;
+   font-weight: 500;
+   transition: background-color 0.2s;
+}
+
+a.chip:hover {
+   background-color: var(--color-secundario);
+   color: #FFFFFF;
+}
+
+/* 3. TARJETAS DE PERFIL (La joya de la web) */
+.perfil-card {
+   background-color: var(--color-superficie);
+   /* Blanca */
+   border-radius: 12px;
+   padding: 24px;
+   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+   text-align: center;
+   transition: transform 0.3s ease;
+   border: 1px solid #F3F4F6;
+}
+
+.perfil-card:hover {
+   transform: translateY(-5px);
+   /* Efecto de flotar al pasar el ratón */
+}
+
+/* Avatar de placeholder (Círculo gris temporal) */
+.perfil-card__avatar {
+   width: 80px;
+   height: 80px;
+   background-color: #D1D5DB;
+   border-radius: 50%;
+   /* Lo hace un círculo perfecto */
+   margin: 0 auto 16px auto;
+   /* Centrado */
+}
+
+.perfil-card h3 {
+   margin-bottom: 4px;
+   font-size: 1.1rem;
+}
+
+.perfil-card__rol {
+   color: var(--color-secundario);
+   font-weight: 600;
+   margin: 0 0 4px 0;
+}
+
+.perfil-card__club {
+   color: var(--color-texto-claro);
+   font-size: 0.9rem;
+   margin: 0 0 16px 0;
+}
+
+/* Sello de "Trayectoria validada" */
+.sello {
+   display: inline-block;
+   padding: 4px 12px;
+   background-color: rgba(182, 242, 58, 0.2);
+   /* Color lima con transparencia */
+   color: var(--color-primario);
+   border-radius: 4px;
+   font-size: 0.8rem;
+   font-weight: bold;
+   margin: 0;
+}
+
+/* 4. BUSCADOR (Hero) */
+.search {
+   display: flex;
+   gap: 10px;
+   margin-top: 30px;
+}
+
+.search input {
+   flex-grow: 1;
+   /* El input toma todo el ancho posible */
+   padding: 12px 16px;
+   border: 2px solid #E5E7EB;
+   border-radius: 6px;
+   font-size: 1rem;
+   outline: none;
+}
+
+.search input:focus {
+   border-color: var(--color-secundario);
+   /* Cambia el borde a verde al hacer clic */
+}
+
+/* ==========================================================
+   5. ESTADOS VACÍOS (Páginas internas en construcción)
+   ========================================================== */
+
+/* Apuntamos directamente al texto en cursiva <em> de las páginas internas */
+main section[aria-labelledby="titulo-pagina"] p em {
+   display: inline-block;
+   margin-top: 30px;
+   padding: 20px 40px;
+
+   /* Usamos el color ámbar (alerta) de tu paleta para avisos */
+   background-color: rgba(242, 169, 59, 0.1);
+   color: #B4781A;
+   /* Un tono oscuro del ámbar para que se lea bien */
+   border: 2px dashed var(--color-alerta);
+   /* Borde punteado estilo "obra" */
+   border-radius: 8px;
+
+   font-style: normal;
+   /* Le quitamos la cursiva fea por defecto */
+   font-weight: 600;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* ==========================================================
+   ESTILOS DE SECCIONES INFERIORES (Empleo, Foro, Extras)
+   ========================================================== */
+
+/* Cabeceras de las secciones (Sin línea gruesa) */
+.section-head {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: none;
+   margin-bottom: 24px;
+}
+
+.section-head h2 {
+   margin: 0;
+   font-size: 1.8rem;
+}
+
+.enlace-flecha {
+   font-weight: 600;
+   font-size: 0.95rem;
+   color: var(--color-primario);
+}
+
+/* ==========================================================
+   TARJETAS DE PERFIL (Alineación izquierda y diseño plano)
+   ========================================================== */
+.perfil-card {
+   background-color: #F8FAFC;
+   /* Un fondo gris/azulado muy sutil */
+   padding: 24px;
+   border-radius: 12px;
+   text-align: left;
+   /* Forzamos alineación a la izquierda */
+   border: 1px solid #E5E7EB;
+   box-shadow: none;
+   /* Quitamos sombras pesadas */
+}
+
+.perfil-card__avatar {
+   width: 60px;
+   height: 60px;
+   background-color: #E2E8F0;
+   border-radius: 50%;
+   border: 1px solid var(--color-secundario);
+   margin-bottom: 16px;
+   display: block;
+}
+
+.perfil-card h3 {
+   font-size: 1.1rem;
+   margin-bottom: 4px;
+}
+
+.perfil-card__rol,
+.perfil-card__club {
+   font-size: 0.9rem;
+   color: var(--color-texto-claro);
+   margin-bottom: 4px;
+}
+
+.perfil-card__club {
+   margin-bottom: 16px;
+}
+
+/* El check verde del Sello Verificado */
+.sello {
+   font-size: 0.85rem;
+   color: #1E7A4F;
+   font-weight: 600;
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   margin: 0;
+}
+
+.sello::before {
+   content: "✔";
+   color: #FFFFFF;
+   background-color: #1E7A4F;
+   border-radius: 50%;
+   width: 16px;
+   height: 16px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 0.6rem;
+}
+
+/* ==========================================================
+   LISTAS DE EMPLEO Y FORO (Filas limpias, sin caja blanca)
+   ========================================================== */
+.lista {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+}
+
+.lista li {
+   display: flex;
+   justify-content: space-between;
+   /* Empuja el contenido a los extremos */
+   align-items: center;
+   padding: 20px 0;
+   border-bottom: 1px solid #E5E7EB;
+   /* Línea sutil separadora */
+   background-color: transparent;
+   /* Eliminamos el fondo de tarjeta */
+   box-shadow: none;
+   border-radius: 0;
+}
+
+.lista li:last-child {
+   border-bottom: none;
+}
+
+/* Textos de la izquierda */
+.lista__izq h3 {
+   font-size: 1.1rem;
+   margin-bottom: 4px;
+   color: var(--color-texto);
+}
+
+.lista__izq p {
+   color: var(--color-texto-claro);
+   font-size: 0.95rem;
+   margin: 0;
+}
+
+/* Enlaces y etiquetas de la derecha */
+.enlace-verde {
+   color: var(--color-primario);
+   font-weight: 600;
+   text-decoration: underline;
+   text-decoration-color: transparent;
+   transition: text-decoration-color 0.2s;
+}
+
+.enlace-verde:hover {
+   text-decoration-color: var(--color-primario);
+}
+
+.tag-rol {
+   background-color: #E6F0EE;
+   /* Verde ultra claro */
+   color: var(--color-primario);
+   padding: 6px 14px;
+   border-radius: 50px;
+   font-size: 0.85rem;
+   font-weight: 500;
+}
+
+/* ==========================================================
+   Tarjetas inferiores (Mentoría, Certificación, Encuentros)
+   ========================================================== */
+.mas__item {
+   background-color: var(--color-superficie);
+   padding: 30px 24px;
+   border-radius: 16px;
+   border: 1px solid #E5E7EB;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.03);
+   display: flex;
+   flex-direction: column;
+}
+
+.mas__item h3 {
+   font-size: 1.3rem;
+   margin-bottom: 12px;
+}
+
+.mas__item p {
+   color: var(--color-texto-claro);
+   margin-bottom: 24px;
+   flex-grow: 1;
+   /* Empuja el enlace hacia abajo para que todas las tarjetas midan igual */
+}
