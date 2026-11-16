@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfiles verificados · UDDEA</title>
+  <meta name="description" content="Directorio de profesionales con trayectoria validada; perfil individual y solicitud de validación.">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- 1. CABECERA (se repite igual en todas las páginas) -->
+  <header class="site-header">
+    <a class="logo" href="../index.html">UDDEA</a>
+    <nav class="main-nav" aria-label="Principal">
+      <ul>
+        <li><a href="perfiles.html" aria-current="page">Perfiles</a></li>
+        <li><a href="empleo.html">Empleo</a></li>
+        <li><a href="foro.html">Foro</a></li>
+        <li><a href="mentoria.html">Mentoría</a></li>
+        <li><a href="certificacion.html">Certificación</a></li>
+        <li><a href="encuentros.html">Encuentros</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="mi-cuenta.html">Entrar</a>
+      <a class="btn" href="mi-cuenta.html">Afiliarse</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="perfiles" aria-labelledby="titulo-pagina">
+      <h1 id="titulo-pagina">Directorio de profesionales</h1>
+      <p>Descubre profesionales del fútbol, consulta sus perfiles y conecta con personas del sector.</p>
+
+      <div class="filtros-perfiles">
+        <label for="filtro-rol">Filtrar por profesión:</label>
+        <select id="filtro-rol" name="rol">
+          <option value="todos">Todas las profesiones</option>
+          <option value="Dirección deportiva">Dirección deportiva</option>
+          <option value="Secretaría técnica">Secretaría técnica</option>
+          <option value="Análisis">Análisis</option>
+          <option value="Jugador/a">Jugadores</option>
+        </select>
+      </div>
+      <div class="perfiles__lista" id="lista-perfiles"></div>
+    </section>
+  </main>
+
+  <!-- 8. PIE DE PÁGINA (se repite igual en todas las páginas) -->
+  <footer class="site-footer">
+    <div class="footer__marca">
+      <strong>UDDEA</strong>
+      <p>Gestión deportiva y comunidad del fútbol.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Secciones"><a href="perfiles.html">Perfiles</a> · <a href="empleo.html">Empleo</a> · <a href="foro.html">Foro</a> · <a href="mentoria.html">Mentoría</a> · <a href="certificacion.html">Certificación</a> · <a href="encuentros.html">Encuentros</a></nav>
+    <address class="footer__contacto">
+      Contacto: <a href="mailto:info@uddea.es">info@uddea.es</a>
+    </address>
+  </footer>
+</body>
+</html>

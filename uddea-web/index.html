@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UDDEA · Comunidad digital del fútbol profesional</title>
+  <meta name="description" content="Comunidad digital de profesionales del fútbol: perfiles verificados, empleo, foro, mentoría, certificación y encuentros.">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- 1. CABECERA (se repite igual en todas las páginas) -->
+  <header class="site-header">
+    <a class="logo" href="index.html">UDDEA</a>
+
+    <!-- Botón del menú móvil -->
+    <button class="menu-toggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="menu-principal"> ☰ </button>
+    <nav class="main-nav" id="menu-principal" aria-label="Principal">
+      <ul>
+        <li><a href="pages/perfiles.html">Perfiles</a></li>
+        <li><a href="pages/empleo.html">Empleo</a></li>
+        <li><a href="pages/foro.html">Foro</a></li>
+        <li><a href="pages/mentoria.html">Mentoría</a></li>
+        <li><a href="pages/certificacion.html">Certificación</a></li>
+        <li><a href="pages/encuentros.html">Encuentros</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="pages/mi-cuenta.html">Entrar</a>
+      <a class="btn" href="pages/mi-cuenta.html">Afiliarse</a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- 2. PORTADA: titular + buscador -->
+    <section class="hero" aria-labelledby="hero-titulo">
+      <div class="hero__texto">
+        <h1 id="hero-titulo">La comunidad del fútbol profesional</h1>
+        <p>Conecta con dirección deportiva, secretaría técnica, clubes y partners. Perfiles validados, empleo, formación y conversación en un solo lugar.</p>
+        <form class="search" id = "form-buscador" role="search" action="pages/perfiles.html" method="get">
+          <label class="visually-hidden" for="buscar">Buscar perfil, club u oferta</label>
+          <input type="search" id="buscar" name="q" placeholder="Buscar perfil, club u oferta…">
+          <button class="btn" type="submit">Buscar</button>
+        </form>
+        <ul class="chips" aria-label="Búsquedas rápidas">
+          <li><a class="chip" href="pages/perfiles.html">Dirección deportiva</a></li>
+          <li><a class="chip" href="pages/perfiles.html">Secretaría técnica</a></li>
+          <li><a class="chip" href="pages/perfiles.html">Análisis</a></li>
+          <li><a class="chip" href="pages/perfiles.html">Jugadores</a></li>
+        </ul>
+      </div>
+
+      <!-- 3. RETO DE LA SEMANA -->
+      <aside class="reto" aria-labelledby="reto-titulo">
+        <p class="reto__etiqueta">Reto de la semana</p>
+        <h2 id="reto-titulo">[Título del reto]</h2>
+        <p>Completa el reto y gana la insignia <strong>[Nombre de la insignia]</strong> en tu perfil.</p>
+        <progress value="40" max="100" aria-label="Progreso del reto">40%</progress>
+        <a class="btn" href="pages/mi-cuenta.html">Ver retos</a>
+      </aside>
+    </section>
+
+    <!-- 4. PERFILES VERIFICADOS -->
+    <section class="perfiles" aria-labelledby="perfiles-titulo">
+      <div class="section-head">
+        <h2 id="perfiles-titulo">Perfiles verificados</h2>
+        <a href="pages/perfiles.html">Ver todos →</a>
+      </div>
+      <div class="perfiles__lista" id="lista-perfiles">
+      </div>
+    </section>
+
+    <!-- 5 y 6. EMPLEO Y FORO (dos columnas) -->
+    <div class="doble">
+      <!-- 5. BOLSA DE EMPLEO -->
+      <section class="empleo" aria-labelledby="empleo-titulo">
+        <div class="section-head">
+          <h2 id="empleo-titulo">Bolsa de empleo</h2>
+          <a href="pages/empleo.html">Ver ofertas →</a>
+        </div>
+        <ul class="lista">
+          <li>
+            <div>
+              <h3>[Puesto]</h3>
+              <p>[Club] · [Ciudad]</p>
+            </div>
+            <a href="pages/empleo.html">Ver oferta</a>
+          </li>
+          <li>
+            <div>
+              <h3>[Puesto]</h3>
+              <p>[Club] · [Ciudad]</p>
+            </div>
+            <a href="pages/empleo.html">Ver oferta</a>
+          </li>
+          <li>
+            <div>
+              <h3>[Puesto]</h3>
+              <p>[Partner] · [Ciudad]</p>
+            </div>
+            <a href="pages/empleo.html">Ver oferta</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 6. FORO TEMÁTICO -->
+      <section class="foro" aria-labelledby="foro-titulo">
+        <div class="section-head">
+          <h2 id="foro-titulo">Foro temático</h2>
+          <a href="pages/foro.html">Ir al foro →</a>
+        </div>
+        <ul class="lista">
+          <li>
+            <div>
+              <h3>[Título del hilo]</h3>
+              <p>por [Nombre]</p>
+            </div>
+            <span class="chip">Dirección deportiva</span>
+          </li>
+          <li>
+            <div>
+              <h3>[Título del hilo]</h3>
+              <p>por [Nombre]</p>
+            </div>
+            <span class="chip">Análisis</span>
+          </li>
+          <li>
+            <div>
+              <h3>[Título del hilo]</h3>
+              <p>por [Nombre]</p>
+            </div>
+            <span class="chip">Secretaría técnica</span>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- 7. MENTORÍA, CERTIFICACIÓN Y ENCUENTROS -->
+    <section class="mas" aria-label="Más apartados">
+      <article class="mas__item">
+        <h2>Mentoría y embajadores</h2>
+        <p>Profesionales con experiencia que acompañan y activan los temas de la comunidad.</p>
+        <a href="pages/mentoria.html">Conocer mentores →</a>
+      </article>
+      <article class="mas__item">
+        <h2>Certificación</h2>
+        <p>Formación continua cuyos certificados se suman a tu trayectoria validada.</p>
+        <a href="pages/certificacion.html">Ver formación →</a>
+      </article>
+      <article class="mas__item">
+        <h2>Encuentros</h2>
+        <p>Eventos online y presenciales para hacer networking con el sector.</p>
+        <a href="pages/encuentros.html">Ver calendario →</a>
+      </article>
+    </section>
+  </main>
+
+  <!-- 8. PIE DE PÁGINA (se repite igual en todas las páginas) -->
+  <footer class="site-footer">
+    <div class="footer__marca">
+      <strong>UDDEA</strong>
+      <p>Gestión deportiva y comunidad del fútbol.</p>
+    </div>
+    <nav class="footer__nav" aria-label="Secciones"><a href="pages/perfiles.html">Perfiles</a> · <a href="pages/empleo.html">Empleo</a> · <a href="pages/foro.html">Foro</a> · <a href="pages/mentoria.html">Mentoría</a> · <a href="pages/certificacion.html">Certificación</a> · <a href="pages/encuentros.html">Encuentros</a></nav>
+    <address class="footer__contacto">
+      Contacto: <a href="mailto:info@uddea.es">info@uddea.es</a>
+    </address>
+  </footer>
+</body>
+</html>

@@ -1,3 +1,4 @@
+
 # UDDEA · Comunidad digital del fútbol profesional
 
 Página web de **UDDEA**, una comunidad digital pensada para reunir a los profesionales del fútbol (dirección deportiva, secretaría técnica, análisis, jugadores, clubes y partners): algo así como *el LinkedIn del sector deportivo*.
@@ -158,4 +159,8 @@ Definidas como variables en `css/base.css`. **Siempre se usan las variables, no 
 - **Equipo de desarrollo:** \[nombres de los integrantes\]
 
 - **Empresa:** UDDEA · [info@uddea.es](mailto:info@uddea.es)
+
+
+
+
 

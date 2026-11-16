@@ -1,0 +1,36 @@
+{
+    "perfiles":[
+        {
+            "id": 1,
+            "nombre": "Carlos Martínez",
+            "rol": "Dirección deportiva",
+            "club": "Club Deportivo Norte",
+            "ciudad": "Madrid",
+            "verificado": true
+        },
+        {
+            "id": 2,
+            "nombre": "Laura Fernández", 
+            "rol": "Secretaría técnica",
+            "club": "Unión Deportiva Mediterráneo",
+            "ciudad": "Valencia",
+            "verificado": true
+        },
+        {
+            "id": 3,
+            "nombre": "David Romero",
+            "rol": "Análisis",
+            "club": "Atlético Central",
+            "ciudad": "Sevilla",
+            "verificado": true
+        },
+        {
+            "id": 4,
+            "nombre": "Paula Sánchez",
+            "rol": "Jugador/a",
+            "club": "Deportivo Costa",
+            "ciudad": "Barcelona",
+            "verificado": true
+        }
+    ]
+}
