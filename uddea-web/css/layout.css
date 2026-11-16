@@ -3,3 +3,126 @@
    Aquí irá: cabecera, rejillas (grid/flex) de cada sección,
    anchos máximos, pie de página y adaptación a móvil (@media).
    ========================================================== */
+
+
+/* ==========================================
+   MENÚ DE NAVEGACIÓN RESPONSIVE
+   ========================================== */
+
+/* En ordenador ocultamos el botón hamburguesa */
+.menu-toggle {
+  display: none;
+}
+
+/* Estilos para pantallas de 768px o menos */
+@media (max-width: 768px) {
+
+  /* Mostramos el botón hamburguesa */
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+  }
+
+  /* Ocultamos el menú por defecto */
+  .main-nav {
+    display: none;
+    width: 100%;
+  }
+
+  /* Cuando JavaScript añade esta clase,
+     mostramos la navegación */
+  .main-nav.menu-abierto {
+    display: block;
+  }
+
+  /* Colocamos los enlaces verticalmente */
+  .main-nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 0;
+    list-style: none;
+  }
+
+  /* Permitimos que el menú ocupe otra fila */
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Colocamos la navegación debajo del logo */
+  .main-nav {
+    order: 3;
+  }
+
+
+/* ==========================================
+   AJUSTES DE CABECERA EN MÓVILES
+   ========================================== */
+
+@media (max-width: 768px) {
+
+  .site-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .logo {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .menu-toggle {
+    flex-shrink: 0;
+    padding: 8px 12px;
+  }
+
+  .main-nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .header-actions {
+    order: 4;
+    display: flex;
+    width: 100%;
+    gap: 12px;
+    justify-content: space-between;
+  }
+
+  .header-actions a {
+    flex: 1;
+    text-align: center;
+  }
+}
+.search {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .search input {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .search button {
+    width: 100%;
+    padding: 12px;
+    cursor: pointer;
+  }
+}
