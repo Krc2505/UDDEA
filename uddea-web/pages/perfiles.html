@@ -33,10 +33,21 @@
   </header>
 
   <main id="contenido">
-    <section aria-labelledby="titulo-pagina">
-      <h1 id="titulo-pagina">Perfiles verificados</h1>
-      <p>Directorio de profesionales con trayectoria validada; perfil individual y solicitud de validación.</p>
-      <p><em>[Página en construcción: aquí irá el contenido de este apartado.]</em></p>
+    <section class="perfiles" aria-labelledby="titulo-pagina">
+      <h1 id="titulo-pagina">Directorio de profesionales</h1>
+      <p>Descubre profesionales del fútbol, consulta sus perfiles y conecta con personas del sector.</p>
+
+      <div class="filtros-perfiles">
+        <label for="filtro-rol">Filtrar por profesión:</label>
+        <select id="filtro-rol" name="rol">
+          <option value="todos">Todas las profesiones</option>
+          <option value="Dirección deportiva">Dirección deportiva</option>
+          <option value="Secretaría técnica">Secretaría técnica</option>
+          <option value="Análisis">Análisis</option>
+          <option value="Jugador/a">Jugadores</option>
+        </select>
+      </div>
+      <div class="perfiles__lista" id="lista-perfiles"></div>
     </section>
   </main>
 
